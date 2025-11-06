@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		kweathercore
 Summary:	KWeatherCore
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	0bb407c52db6a493bbb98fba1537192a
+# Source0-md5:	da83b6e31a827d21060fd4e351fe4b28
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -82,12 +82,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKWeatherCore.so.*.*
+%{_libdir}/libKWeatherCore.so.*.*
 %ghost %{_libdir}/libKWeatherCore.so.6
 %dir %{_libdir}/qt6/qml/org/kde/weathercore
 %{_libdir}/qt6/qml/org/kde/weathercore/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/weathercore/kweathercoreqmlplugin.qmltypes
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/weathercore/libkweathercoreqmlplugin.so
+%{_libdir}/qt6/qml/org/kde/weathercore/libkweathercoreqmlplugin.so
 %{_libdir}/qt6/qml/org/kde/weathercore/qmldir
 
 %files devel
