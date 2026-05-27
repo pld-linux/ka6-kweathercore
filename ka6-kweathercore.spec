@@ -37,6 +37,11 @@ Get weather forecast and alerts anywhere on the earth easy.
 KWeatherCore provides you a highly abstracted library for things
 related to weather.
 
+%description -l pl.UTF-8
+Pobierz łatwo prognozy pogody i alerty pogodowe gdziekolwiek na Ziemi.
+KWeatherCore dostarcza Ci wysoce abstrakcyjną bibliotekę do rzeczy
+zwiazanych z pogodą.
+
 %package devel
 Summary:	Header files for %{kaname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kaname}
